@@ -1,6 +1,7 @@
 package amberteam.antycaptcha;
 
 import com.microsoft.playwright.Page;
+
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 
@@ -14,7 +15,7 @@ public class Exercise2EditBox extends MainPage {
         return page.innerText("(//td/code)[1]");
     }
 
-    public void userExecutesEditBoxExerciseSteps(){
+    public void userExecutesEditBoxExerciseSteps() {
         page.locator("xpath=//*[@id='t14']").fill(getExpectedResult());
         page.click("//button[@id='btnButton1']");
     }
