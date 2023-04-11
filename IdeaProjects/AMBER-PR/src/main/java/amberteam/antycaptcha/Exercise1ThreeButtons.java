@@ -20,7 +20,7 @@ public class Exercise1ThreeButtons extends MainPage {
         String expectedValue = "";
         for (int i = 1; i <= 5; i += 2) {
             if (userGetsExpectedResult().charAt(i) == '1') {
-                page.click("//button[@id='btnButton1']");
+                page.click("//button[@id='btnButton11']");
                 expectedValue = getExpectedValue(i, 1, expectedValue, b1);
                 expectedValue = getExpectedValue(i, 3, expectedValue, b1);
                 expectedValue = getExpectedValue(i, 5, expectedValue, b1);
