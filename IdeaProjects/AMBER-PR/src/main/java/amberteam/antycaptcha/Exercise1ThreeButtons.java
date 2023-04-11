@@ -29,7 +29,7 @@ public class Exercise1ThreeButtons extends MainPage {
                 expectedValue = getExpectedValue(i, 1, expectedValue, b2);
                 expectedValue = getExpectedValue(i, 3, expectedValue, b2);
                 expectedValue = getExpectedValue(i, 5, expectedValue, b2);
-              }
+            }
         }
     }
 
@@ -42,7 +42,7 @@ public class Exercise1ThreeButtons extends MainPage {
     }
 
     private String getExpectedValue(int currentLoopIteration, int expectedLoopValue,
-                                           String expectedValue, String buttonNumber) {
+                                    String expectedValue, String buttonNumber) {
         if (currentLoopIteration == expectedLoopValue) {
             int button1 = page.querySelectorAll("//pre[@id='trail']" +
                     "//code[contains(text(),'" + expectedValue + buttonNumber + "')]").size();
