@@ -31,7 +31,7 @@ public class AmberTeamTests {
     @Test
     public void exercise1ThreeButtons() {
         mainPage = new MainPage(page);
-        mainPage.openExercise1();
+        mainPage.openExercise(1);
 
         exercise1ThreeButtons = new Exercise1ThreeButtons(page);
         exercise1ThreeButtons.userClicksTheTaskButtonsInTheCorrectOrder();
@@ -42,7 +42,7 @@ public class AmberTeamTests {
     @Test
     public void exercise2EditBox() {
         mainPage = new MainPage(page);
-        mainPage.openExercise2();
+        mainPage.openExercise(2);
 
         exercise2EditBox = new Exercise2EditBox(page);
         exercise2EditBox.getExpectedResult();
@@ -54,7 +54,7 @@ public class AmberTeamTests {
     @Test
     public void exercise3DropdownList(){
         mainPage = new MainPage(page);
-        mainPage.openExercise3();
+        mainPage.openExercise(3);
 
         exercise3DropdownList = new Exercise3DropdownList(page);
         exercise3DropdownList.userSelectExpectedOption();
@@ -65,7 +65,7 @@ public class AmberTeamTests {
     @Test
     public void exercise4RadioButtons() throws InterruptedException {
         mainPage = new MainPage(page);
-        mainPage.openExercise4();
+        mainPage.openExercise(4);
 
         exercise4RadioButtons = new Exercise4RadioButtons(page);
         exercise4RadioButtons.userGetsExpectedValuesAndSelectCorrectOptions();

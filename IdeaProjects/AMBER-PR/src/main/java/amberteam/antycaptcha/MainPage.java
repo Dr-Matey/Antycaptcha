@@ -14,20 +14,8 @@ public class MainPage {
         page.navigate("http://antycaptcha.amberteam.pl/");
     }
 
-    public void openExercise1() {
-        page.click("//a[contains(@href,'exercise1')]");
-    }
-
-    public void openExercise2() {
-        page.click("//a[contains(@href,'exercise2')]");
-    }
-
-    public void openExercise3() {
-        page.click("//a[contains(@href,'exercise3')]");
-    }
-
-    public void openExercise4() {
-        page.click("//a[contains(@href,'exercise4')]");
+    public void openExercise(int exerciseNumber) {
+        page.click("//a[contains(@href,'exercise"+exerciseNumber+"')]");
     }
 }
 
