@@ -7,7 +7,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 public class AmberTeamTests {
+
     public Playwright playwright;
     public Browser browser;
     public Page page;
@@ -47,7 +49,6 @@ public class AmberTeamTests {
         mainPage.openExercise(2);
 
         exercise2EditBox = new Exercise2EditBox(page);
-        exercise2EditBox.getExpectedResult();
         exercise2EditBox.userExecutesEditBoxExerciseSteps();
         exercise2EditBox.userClicksCheckSolutionButton();
         exercise2EditBox.userChecksIfSolutionIsCorrect();
@@ -59,13 +60,13 @@ public class AmberTeamTests {
         mainPage.openExercise(3);
 
         exercise3DropdownList = new Exercise3DropdownList(page);
-        exercise3DropdownList.userSelectExpectedOption();
+        exercise3DropdownList.userSelectsExpectedOption();
         exercise3DropdownList.userClicksCheckSolutionButton();
         exercise3DropdownList.userChecksIfSolutionIsCorrect();
     }
 
     @Test
-    public void exercise4RadioButtons() throws InterruptedException {
+    public void exercise4RadioButtons() {
         mainPage = new MainPage(page);
         mainPage.openExercise(4);
 

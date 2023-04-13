@@ -4,6 +4,7 @@ import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+
 public class Exercise1ThreeButtons extends MainPage {
 
     public Exercise1ThreeButtons(Page page) {

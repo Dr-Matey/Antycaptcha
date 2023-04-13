@@ -15,24 +15,19 @@ public class Exercise4RadioButtons extends MainPage {
         return page.innerText("//td[contains(text(),'Trail set to:')]/code");
     }
 
-    public void userGetsExpectedValuesAndSelectCorrectOptions() throws InterruptedException {
+    public void userGetsExpectedValuesAndSelectCorrectOptions() {
         String step0 = "v" + userGetsExpectedOutcome().substring(1, 2) + "0";
         String step1 = "v" + userGetsExpectedOutcome().substring(4, 5) + "1";
         String step2 = "v" + userGetsExpectedOutcome().substring(7, 8) + "2";
         String step3 = "v" + userGetsExpectedOutcome().substring(10, 11) + "3";
         page.click("//input[@value='" + step0 + "']");
-        Thread.sleep(100);
         page.click("//input[@value='" + step1 + "']");
-        Thread.sleep(100);
         page.click("//input[@value='" + step2 + "']");
-        Thread.sleep(100);
         page.click("//input[@value='" + step3 + "']");
-        Thread.sleep(100);
     }
 
-    public void userClicksCheckSolutionButton() throws InterruptedException {
+    public void userClicksCheckSolutionButton() {
         page.click("//button[@id='solution']");
-        Thread.sleep(100);
     }
 
     public void userChecksIfSolutionIsCorrect() {

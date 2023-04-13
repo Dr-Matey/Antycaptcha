@@ -6,6 +6,7 @@ import java.util.Objects;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+
 public class Exercise3DropdownList extends MainPage {
 
     public Exercise3DropdownList(Page page) {
@@ -16,7 +17,7 @@ public class Exercise3DropdownList extends MainPage {
         return page.innerText("(//td/code)[1]");
     }
 
-    public void userSelectExpectedOption() {
+    public void userSelectsExpectedOption() {
         page.locator("select").selectOption(userGetsExpectedOption());
         isOptionSelectedCorrect();
     }

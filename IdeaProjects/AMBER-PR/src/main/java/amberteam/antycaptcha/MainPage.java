@@ -2,6 +2,7 @@ package amberteam.antycaptcha;
 
 import com.microsoft.playwright.Page;
 
+
 public class MainPage {
 
     Page page;
@@ -18,4 +19,3 @@ public class MainPage {
         page.click("//a[contains(@href,'exercise" + exerciseNumber + "')]");
     }
 }
-
