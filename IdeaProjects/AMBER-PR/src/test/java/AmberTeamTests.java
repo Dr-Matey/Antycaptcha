@@ -3,7 +3,9 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class AmberTeamTests {
     public Playwright playwright;
@@ -52,7 +54,7 @@ public class AmberTeamTests {
     }
 
     @Test
-    public void exercise3DropdownList(){
+    public void exercise3DropdownList() {
         mainPage = new MainPage(page);
         mainPage.openExercise(3);
 

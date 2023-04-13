@@ -1,12 +1,12 @@
 package amberteam.antycaptcha;
 
-import com.microsoft.playwright.*;
+import com.microsoft.playwright.Page;
 
 public class MainPage {
 
     Page page;
 
-    public MainPage(Page page){
+    public MainPage(Page page) {
         this.page = page;
     }
 
@@ -15,7 +15,7 @@ public class MainPage {
     }
 
     public void openExercise(int exerciseNumber) {
-        page.click("//a[contains(@href,'exercise"+exerciseNumber+"')]");
+        page.click("//a[contains(@href,'exercise" + exerciseNumber + "')]");
     }
 }
 

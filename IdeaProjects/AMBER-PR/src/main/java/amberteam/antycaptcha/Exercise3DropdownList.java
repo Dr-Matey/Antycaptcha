@@ -16,14 +16,15 @@ public class Exercise3DropdownList extends MainPage {
         return page.innerText("(//td/code)[1]");
     }
 
-    public void userSelectExpectedOption(){
+    public void userSelectExpectedOption() {
         page.locator("select").selectOption(userGetsExpectedOption());
         isOptionSelectedCorrect();
-        }
+    }
 
-    public  String getSolutionCode(){
+    public String getSolutionCode() {
         return page.innerText("(//td)[3]/code");
     }
+
     public void isOptionSelectedCorrect() {
         boolean compersionResult;
         do {
@@ -36,7 +37,7 @@ public class Exercise3DropdownList extends MainPage {
                 page.reload();
                 page.locator("select").selectOption(userGetsExpectedOption());
             }
-        }while (compersionResult);
+        } while (compersionResult);
     }
 
     public void userClicksCheckSolutionButton() {
