@@ -31,7 +31,6 @@ public class Exercise4RadioButtonsPage extends MainPage {
     }
 
     public void userClicksCheckSolutionButton() {
-        page.locator("//code[@class='wrap' and not(contains(text(),'-1'))]").waitFor();
         page.click("//button[@id='solution']");
     }
 
