@@ -4,7 +4,6 @@ import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-
 public class Exercise2EditBox extends MainPage {
 
     public Exercise2EditBox(Page page) {

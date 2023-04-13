@@ -2,7 +2,6 @@ package amberteam.antycaptcha;
 
 import com.microsoft.playwright.Page;
 
-
 public class MainPage {
 
     Page page;
