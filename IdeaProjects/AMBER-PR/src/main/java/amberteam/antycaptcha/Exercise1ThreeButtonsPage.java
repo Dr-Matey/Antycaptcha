@@ -15,6 +15,7 @@ public class Exercise1ThreeButtonsPage extends MainPage {
     }
 
     public void userClicksTheTaskButtonsInTheCorrectOrder() {
+        logger.info("User clicks correct buttons");
         String b1 = "b1";
         String b2 = "b2";
         String expectedValue = "";
@@ -38,6 +39,7 @@ public class Exercise1ThreeButtonsPage extends MainPage {
     }
 
     public void userChecksIfSolutionIsCorrect() {
+        logger.info("User checks right answer");
         assertThat(page.locator("//code[@class='wrap']")).containsText("OK. Good answer");
     }
 

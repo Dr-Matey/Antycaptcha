@@ -15,6 +15,7 @@ public class Exercise2EditBoxPage extends MainPage {
     }
 
     public void userExecutesEditBoxExerciseSteps() {
+        logger.info("User enters correct text and clicks correct button");
         page.locator("xpath=//*[@id='t14']").fill(getExpectedResult());
         page.click("//button[@id='btnButton1']");
     }
@@ -24,6 +25,7 @@ public class Exercise2EditBoxPage extends MainPage {
     }
 
     public void userChecksIfSolutionIsCorrect() {
+      logger.info("User checks right answer");
         assertThat(page.locator("//code[@class='wrap']")).containsText("OK. Good answer");
     }
 }

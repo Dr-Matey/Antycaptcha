@@ -15,6 +15,7 @@ public class Exercise4RadioButtonsPage extends MainPage {
     }
 
     public void userGetsExpectedValuesAndSelectCorrectOptions() {
+        logger.info("User clicks correct options");
         String step0 = "v" + userGetsExpectedOutcome().substring(1, 2) + "0";
         String step1 = "v" + userGetsExpectedOutcome().substring(4, 5) + "1";
         String step2 = "v" + userGetsExpectedOutcome().substring(7, 8) + "2";
@@ -35,6 +36,7 @@ public class Exercise4RadioButtonsPage extends MainPage {
     }
 
     public void userChecksIfSolutionIsCorrect() {
+        logger.info("User checks right answer");
         assertThat(page.locator("//code[@class='wrap']")).containsText("OK. Good answer");
     }
 }

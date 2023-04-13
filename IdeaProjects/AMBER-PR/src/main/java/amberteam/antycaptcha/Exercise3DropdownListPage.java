@@ -26,6 +26,7 @@ public class Exercise3DropdownListPage extends MainPage {
     }
 
     public void isOptionSelectedCorrect() {
+        logger.info("User selects correct option");
         boolean compersionResult;
         do {
             compersionResult = Objects.equals(getSolutionCode(), page.innerText("//code[@class='wrap']"));
@@ -45,6 +46,7 @@ public class Exercise3DropdownListPage extends MainPage {
     }
 
     public void userChecksIfSolutionIsCorrect() {
+        logger.info("User checks right answer");
         assertThat(page.locator("//code[@class='wrap']")).containsText("OK. Good answer");
     }
 }
