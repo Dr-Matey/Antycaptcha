@@ -4,9 +4,9 @@ import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class Exercise2EditBox extends MainPage {
+public class Exercise2EditBoxPage extends MainPage {
 
-    public Exercise2EditBox(Page page) {
+    public Exercise2EditBoxPage(Page page) {
         super(page);
     }
 

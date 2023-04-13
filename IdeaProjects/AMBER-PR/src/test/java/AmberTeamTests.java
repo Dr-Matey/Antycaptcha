@@ -13,10 +13,10 @@ public class AmberTeamTests {
     public Browser browser;
     public Page page;
     public MainPage mainPage;
-    public Exercise1ThreeButtons exercise1ThreeButtons;
-    public Exercise2EditBox exercise2EditBox;
-    public Exercise3DropdownList exercise3DropdownList;
-    public Exercise4RadioButtons exercise4RadioButtons;
+    public Exercise1ThreeButtonsPage exercise1ThreeButtonsPage;
+    public Exercise2EditBoxPage exercise2EditBoxPage;
+    public Exercise3DropdownListPage exercise3DropdownListPage;
+    public Exercise4RadioButtonsPage exercise4RadioButtonsPage;
 
     @BeforeEach
     void setup() {
@@ -36,10 +36,10 @@ public class AmberTeamTests {
         mainPage = new MainPage(page);
         mainPage.openExercise(1);
 
-        exercise1ThreeButtons = new Exercise1ThreeButtons(page);
-        exercise1ThreeButtons.userClicksTheTaskButtonsInTheCorrectOrder();
-        exercise1ThreeButtons.userClicksCheckSolutionButton();
-        exercise1ThreeButtons.userChecksIfSolutionIsCorrect();
+        exercise1ThreeButtonsPage = new Exercise1ThreeButtonsPage(page);
+        exercise1ThreeButtonsPage.userClicksTheTaskButtonsInTheCorrectOrder();
+        exercise1ThreeButtonsPage.userClicksCheckSolutionButton();
+        exercise1ThreeButtonsPage.userChecksIfSolutionIsCorrect();
     }
 
     @Test
@@ -47,10 +47,10 @@ public class AmberTeamTests {
         mainPage = new MainPage(page);
         mainPage.openExercise(2);
 
-        exercise2EditBox = new Exercise2EditBox(page);
-        exercise2EditBox.userExecutesEditBoxExerciseSteps();
-        exercise2EditBox.userClicksCheckSolutionButton();
-        exercise2EditBox.userChecksIfSolutionIsCorrect();
+        exercise2EditBoxPage = new Exercise2EditBoxPage(page);
+        exercise2EditBoxPage.userExecutesEditBoxExerciseSteps();
+        exercise2EditBoxPage.userClicksCheckSolutionButton();
+        exercise2EditBoxPage.userChecksIfSolutionIsCorrect();
     }
 
     @Test
@@ -58,10 +58,10 @@ public class AmberTeamTests {
         mainPage = new MainPage(page);
         mainPage.openExercise(3);
 
-        exercise3DropdownList = new Exercise3DropdownList(page);
-        exercise3DropdownList.userSelectsExpectedOption();
-        exercise3DropdownList.userClicksCheckSolutionButton();
-        exercise3DropdownList.userChecksIfSolutionIsCorrect();
+        exercise3DropdownListPage = new Exercise3DropdownListPage(page);
+        exercise3DropdownListPage.userSelectsExpectedOption();
+        exercise3DropdownListPage.userClicksCheckSolutionButton();
+        exercise3DropdownListPage.userChecksIfSolutionIsCorrect();
     }
 
     @Test
@@ -69,9 +69,9 @@ public class AmberTeamTests {
         mainPage = new MainPage(page);
         mainPage.openExercise(4);
 
-        exercise4RadioButtons = new Exercise4RadioButtons(page);
-        exercise4RadioButtons.userGetsExpectedValuesAndSelectCorrectOptions();
-        exercise4RadioButtons.userClicksCheckSolutionButton();
-        exercise4RadioButtons.userChecksIfSolutionIsCorrect();
+        exercise4RadioButtonsPage = new Exercise4RadioButtonsPage(page);
+        exercise4RadioButtonsPage.userGetsExpectedValuesAndSelectCorrectOptions();
+        exercise4RadioButtonsPage.userClicksCheckSolutionButton();
+        exercise4RadioButtonsPage.userChecksIfSolutionIsCorrect();
     }
 }

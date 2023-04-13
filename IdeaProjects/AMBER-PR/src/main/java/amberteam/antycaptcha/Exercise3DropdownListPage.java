@@ -6,9 +6,9 @@ import java.util.Objects;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class Exercise3DropdownList extends MainPage {
+public class Exercise3DropdownListPage extends MainPage {
 
-    public Exercise3DropdownList(Page page) {
+    public Exercise3DropdownListPage(Page page) {
         super(page);
     }
 

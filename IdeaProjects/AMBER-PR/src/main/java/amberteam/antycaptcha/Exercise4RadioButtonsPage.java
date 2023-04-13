@@ -4,9 +4,9 @@ import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class Exercise4RadioButtons extends MainPage {
+public class Exercise4RadioButtonsPage extends MainPage {
 
-    public Exercise4RadioButtons(Page page) {
+    public Exercise4RadioButtonsPage(Page page) {
         super(page);
     }
 
