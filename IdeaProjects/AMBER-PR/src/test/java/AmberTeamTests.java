@@ -34,7 +34,7 @@ public class AmberTeamTests {
     @Test
     public void exercise1ThreeButtons() {
         mainPage = new MainPage(page);
-        mainPage.openExercise(1);
+        mainPage.userOpensExercise(1);
 
         exercise1ThreeButtonsPage = new Exercise1ThreeButtonsPage(page);
         exercise1ThreeButtonsPage.userClicksTheTaskButtonsInTheCorrectOrder();
@@ -45,7 +45,7 @@ public class AmberTeamTests {
     @Test
     public void exercise2EditBox() {
         mainPage = new MainPage(page);
-        mainPage.openExercise(2);
+        mainPage.userOpensExercise(2);
 
         exercise2EditBoxPage = new Exercise2EditBoxPage(page);
         exercise2EditBoxPage.userExecutesEditBoxExerciseSteps();
@@ -56,7 +56,7 @@ public class AmberTeamTests {
     @Test
     public void exercise3DropdownList() {
         mainPage = new MainPage(page);
-        mainPage.openExercise(3);
+        mainPage.userOpensExercise(3);
 
         exercise3DropdownListPage = new Exercise3DropdownListPage(page);
         exercise3DropdownListPage.userSelectsExpectedOption();
@@ -67,7 +67,7 @@ public class AmberTeamTests {
     @Test
     public void exercise4RadioButtons() {
         mainPage = new MainPage(page);
-        mainPage.openExercise(4);
+        mainPage.userOpensExercise(4);
 
         exercise4RadioButtonsPage = new Exercise4RadioButtonsPage(page);
         exercise4RadioButtonsPage.userGetsExpectedValuesAndSelectCorrectOptions();

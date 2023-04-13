@@ -15,7 +15,7 @@ public class Exercise4RadioButtonsPage extends MainPage {
     }
 
     public void userGetsExpectedValuesAndSelectCorrectOptions() {
-        logger.info("User clicks correct options");
+        logger.info("User selects correct radio buttons.");
         String step0 = "v" + userGetsExpectedOutcome().substring(1, 2) + "0";
         String step1 = "v" + userGetsExpectedOutcome().substring(4, 5) + "1";
         String step2 = "v" + userGetsExpectedOutcome().substring(7, 8) + "2";
@@ -25,18 +25,19 @@ public class Exercise4RadioButtonsPage extends MainPage {
             page.click("//input[@value='" + step1 + "']");
             page.click("//input[@value='" + step2 + "']");
             page.click("//input[@value='" + step3 + "']");
-            if (page.querySelectorAll("//code[@class='wrap' and not(contains(text(),'-1'))]").size() > 0){
+            if (page.querySelectorAll("//code[@class='wrap' and not(contains(text(),'-1'))]").size() > 0) {
                 break;
             }
         }
     }
 
     public void userClicksCheckSolutionButton() {
+        logger.info("User clicks 'CHECK SOLUTION' button.");
         page.click("//button[@id='solution']");
     }
 
     public void userChecksIfSolutionIsCorrect() {
-        logger.info("User checks right answer");
+        logger.info("User checks if solution is correct.");
         assertThat(page.locator("//code[@class='wrap']")).containsText("OK. Good answer");
     }
 }

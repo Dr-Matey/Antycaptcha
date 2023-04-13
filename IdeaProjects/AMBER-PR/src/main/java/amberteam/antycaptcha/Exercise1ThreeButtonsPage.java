@@ -15,7 +15,7 @@ public class Exercise1ThreeButtonsPage extends MainPage {
     }
 
     public void userClicksTheTaskButtonsInTheCorrectOrder() {
-        logger.info("User clicks correct buttons");
+        logger.info("User clicks correct buttons.");
         String b1 = "b1";
         String b2 = "b2";
         String expectedValue = "";
@@ -35,11 +35,12 @@ public class Exercise1ThreeButtonsPage extends MainPage {
     }
 
     public void userClicksCheckSolutionButton() {
+        logger.info("User clicks 'CHECK SOLUTION' button.");
         page.click("//button[@id='solution']");
     }
 
     public void userChecksIfSolutionIsCorrect() {
-        logger.info("User checks right answer");
+        logger.info("User checks if solution is correct.");
         assertThat(page.locator("//code[@class='wrap']")).containsText("OK. Good answer");
     }
 
