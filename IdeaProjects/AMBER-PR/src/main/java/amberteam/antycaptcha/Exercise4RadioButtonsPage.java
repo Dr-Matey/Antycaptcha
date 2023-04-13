@@ -19,10 +19,15 @@ public class Exercise4RadioButtonsPage extends MainPage {
         String step1 = "v" + userGetsExpectedOutcome().substring(4, 5) + "1";
         String step2 = "v" + userGetsExpectedOutcome().substring(7, 8) + "2";
         String step3 = "v" + userGetsExpectedOutcome().substring(10, 11) + "3";
-        page.click("//input[@value='" + step0 + "']");
-        page.click("//input[@value='" + step1 + "']");
-        page.click("//input[@value='" + step2 + "']");
-        page.click("//input[@value='" + step3 + "']");
+        for (int i = 0; i < 5; i++) {
+            page.click("//input[@value='" + step0 + "']");
+            page.click("//input[@value='" + step1 + "']");
+            page.click("//input[@value='" + step2 + "']");
+            page.click("//input[@value='" + step3 + "']");
+            if (page.querySelectorAll("//code[@class='wrap' and not(contains(text(),'-1'))]").size() > 0){
+                break;
+            }
+        }
     }
 
     public void userClicksCheckSolutionButton() {
